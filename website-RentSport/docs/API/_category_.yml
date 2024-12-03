@@ -1,7 +1,0 @@
-label: API Документация
-position: 2
-collapsible: true
-collapsed: true
-link:
-  type: generated-index
-  title: АПИ # Заголовок на странице
