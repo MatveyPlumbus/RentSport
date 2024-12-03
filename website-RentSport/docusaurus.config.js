@@ -1,128 +1,116 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer'; // Импортируем prismThemes
 
-const simplePlantUML = require("@akebifiky/remark-simple-plantuml"); // объявляем плагин для plantuml
-
+/** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'RentSport',
-  tagline: 'Сайт для аренды спортивного оборудования',
-  url: 'https://MatveyPlumbus.github.io',
-  baseUrl: '/RentSport/',
-  organizationName: 'MatveyPlumbus',
-  projectName: 'RentSport',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  title: 'RentSport', // Название сайта на начальной странице
+  tagline: 'Сайт для аренды спортивного оборудования', // Описание сайта на начальной странице
+  favicon: 'img/favicon.ico', // Иконка сайта
+  url: 'https://MatveyPlumbus.github.io', // Адрес GitHub Pages
+  baseUrl: '/RentSport/', // Базовый URL
+  organizationName: 'MatveyPlumbus', // Имя GitHub пользователя
+  projectName: 'RentSport', // Имя репозитория
+  onBrokenLinks: 'warn', // Логировать предупреждения для неработающих ссылок
+  onBrokenMarkdownLinks: 'warn', // Логировать предупреждения для неработающих ссылок
   trailingSlash: false,
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'gh-pages', // Ветка для деплоя
 
-//подключаем плагин для drawio
-plugins: [
-  ['drawio', {}]
-],
-presets: [
-  [
-    'classic',
-    /** @type {import('@docusaurus/preset-classic').Options} */
-    ({
-      docs: {
-        sidebarPath: './sidebars.js',
-        routeBasePath: 'docs',
-        editUrl:
-          'https://github.com/MatveyPlumbus/RentSport',
-        remarkPlugins: [simplePlantUML], //подключаем плагин для plantuml
+  plugins: [
+    ['drawio', {}], // Подключение плагина для drawio
+  ],
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: './sidebars.js', // Путь к файлу конфигурации сайдбара
+          routeBasePath: 'docs', // Базовый путь для документации
+          editUrl:
+            'https://github.com/MatveyPlumbus/RentSport', // Ссылка для редактирования документации
+        },
+        blog: false, // Отключение блога
+        theme: {
+          customCss: './src/css/custom.css', // Пользовательский CSS
+        },
+      }),
+    ],
+    // Подключение плагина для OpenAPI
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            id: 'rent-equipment',
+            spec: 'api-specs/openapi.yaml', // Путь к спецификации OpenAPI
+          },
+        ],
+        theme: {
+          primaryColor: '#1890ff', // Цветовая тема
+        },
       },
-      blog: false,
-      theme: {
-        customCss: './src/css/custom.css',
+    ],
+  ],
+
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      image: 'img/docusaurus-social-card.jpg', // Изображение для социальных сетей
+      navbar: {
+        title: 'RentSport', // Название в навбаре
+        logo: {
+          alt: 'RentSport Logo',
+          src: 'img/logo.svg', // Логотип в навбаре
+        },
+        items: [
+          {
+            href: 'https://github.com/MatveyPlumbus/RentSport',
+            label: 'GitHub',
+            position: 'right', // Позиция на навбаре
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Docs',
+                to: '/docs/', // Ссылка на документацию
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/MatveyPlumbus/RentSport',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} MatveyPlumbus. Built with Docusaurus.`,
+      },
+      prism: {
+        theme: prismThemes.github, // Тема подсветки кода
+        darkTheme: prismThemes.dracula,
       },
     }),
-  ],
-  // подключаем плагин для OPENAPI
-  [
-    'redocusaurus',
-    {
-      specs: [
-        {
-          id: 'api',
-          spec: 'api_specs/openapi.yaml',
-        },
-      ],
-      theme: {
-        primaryColor: '#1890ff',
-      },
-    }
-  ],
-],
-
-themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  ({
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'RentSport', //Название на навбаре
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.png', //Логотип на навбаре
-      },
-      // тут можно настроить элементы навбара
-      items: [
-        {
-          href: 'https://github.com/MatveyPlumbus/RentSport',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    // тут можно настроить элементы футера
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Docs',
-              to: '/docs/',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  }),
 };
-  
+
 export default config;
