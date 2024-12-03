@@ -18,6 +18,7 @@ const config = {
   plugins: [
     ['drawio', {}], // Подключение плагина Drawio
   ],
+  
   presets: [
     [
       'classic',

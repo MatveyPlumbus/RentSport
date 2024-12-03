@@ -1,14 +1,11 @@
 ---
-title: Концептуальная модель данных
-sidebar_position: 1
+title: Физическая модель данных
+sidebar_position: 2
 ---
 
-# Концептуальная модель данных
+# Физическая модель данных
 
-import Drawio from '@theme/Drawio'
-import diagram from '!!raw-loader!./model.drawio';
-
-<Drawio content={diagram} editable={false} />
+![alt text](image.png)
 
 
 ## Таблица 1. Сущность Категории инвентаря (inventory_category)

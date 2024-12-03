@@ -1,3 +1,4 @@
+---
 title: Sequence диаграмма Добавление нового инвентаря
 sidebar_position: 3
 ---
