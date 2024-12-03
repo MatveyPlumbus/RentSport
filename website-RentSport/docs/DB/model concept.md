@@ -1,5 +1,5 @@
 ---
-title: Concept
+title: Concept DB
 sidebar_position: 1
 ---
 
