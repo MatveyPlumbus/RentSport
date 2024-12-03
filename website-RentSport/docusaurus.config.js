@@ -1,7 +1,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
-//const simplePlantUML = require("@akebifiky/remark-simple-plantuml"); // объявляем плагин для plantuml
+const simplePlantUML = require("@akebifiky/remark-simple-plantuml"); // объявляем плагин для plantuml
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
