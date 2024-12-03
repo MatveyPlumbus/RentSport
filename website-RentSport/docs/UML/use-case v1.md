@@ -1,5 +1,5 @@
 ---
-title: Use Case diagramm
+title: Use Case diagramm v1 (Меньше разделение)
 sidebar_position: 1
 ---
 # Use Case diagramm
@@ -28,7 +28,17 @@ usecase UC3 as "Удаление инвентаря"
 
 package "Работа с клиентами" {
 
+package "Бронирование" {
+
 usecase UC4 as "Онлайн-бронирование инвентаря"
+
+usecase UC15 as "Оплата аренды инвентаря"
+
+usecase UC16 as "Предоставление скидки на аренду"
+
+}
+
+package "Отзывы и рейтинги" {
 
 usecase UC11 as "Отзывы и рейтинги"
 
@@ -36,15 +46,25 @@ usecase UC17 as "Отзыв и рейтинг на арендатора"
 
 usecase UC18 as "Отзыв и рейтинг на инвентарь"
 
+}
+
+package "Чат" {
+
 usecase UC12 as "Чат (поддержка)"
+
+}
+
+package "Регистрация" {
 
 usecase UC14 as "Регистрация пользователей"
 
-usecase UC15 as "Оплата аренды инвентаря"
+}
 
-usecase UC16 as "Предоставление скидки на аренду"
+package "Экран администратора для управления доступом пользователей" {
 
 usecase UC19 as "Управление доступом пользователей"
+
+}
 
 }
 
