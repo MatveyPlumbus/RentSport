@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite_rent_sport=self.webpackChunkwebsite_rent_sport||[]).push([[647],{7121:(e,s,r)=>{r.r(s),r.d(s,{default:()=>i});r(6540);var t=r(4164),n=r(1003),u=r(7559),a=r(2831),c=r(781),p=r(4848);function i(e){return(0,p.jsx)(n.e3,{className:(0,t.A)(u.G.wrapper.docsPages),children:(0,p.jsx)(c.A,{children:(0,a.v)(e.route.routes)})})}}}]);
