@@ -1,7 +1,7 @@
 position: 4 # для сортировки папки в сайдбаре
-label: Concept DB # название пункта меню в сайдбаре
+label: Модель данных # название пункта меню в сайдбаре
 collapsible: true
 collapsed: true
 link:
   type: generated-index
-  title: Concept DB # Заголовок на странице
+  title: Модель данных # Заголовок на странице

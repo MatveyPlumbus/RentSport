@@ -1,5 +1,5 @@
 ---
-title: API 1 - Swagger Petstore
+title: API 1 - Swagger RentSport
 hide_table_of_contents: true
 ---
 
