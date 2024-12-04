@@ -5,7 +5,7 @@ sidebar_position: 1
 # BPMN Процесс Онлайн-бронирование инвентаря
 
 
-![BPMN dz Tbank ver7.png]![alt text](image.png)
+[alt text](image.png)
 
 ### DML:
 
