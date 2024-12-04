@@ -5,7 +5,7 @@ sidebar_position: 1
 # BPMN Процесс Онлайн-бронирование инвентаря
 
 
-[alt text](image.png)
+![image.png](image.png)
 
 ### DML:
 
