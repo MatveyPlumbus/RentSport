@@ -2,7 +2,7 @@
 title: Use Case diagramm v2
 sidebar_position: 2
 ---
-# Use Case diagramm
+# Use Case diagramm v2
 
 ```plantuml
 

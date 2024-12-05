@@ -3,7 +3,7 @@ title: Use Case diagramm v1 (Меньше категорий для mvp)
 sidebar_position: 1
 ---
 
-# Use Case diagramm
+# Use Case diagramm v1 (Меньше категорий для mvp)
 
 ```plantuml
 

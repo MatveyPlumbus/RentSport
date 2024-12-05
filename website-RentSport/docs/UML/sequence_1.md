@@ -2,7 +2,7 @@
 title: Sequence диаграмма Добавление нового инвентаря
 sidebar_position: 3
 ---
-# Use Case diagramm
+# Sequence диаграмма Добавление нового инвентаря
 
 ```plantuml
 
